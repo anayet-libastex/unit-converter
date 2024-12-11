@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+/* Header Section */
+.header {
+  background-color: #0073e6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main Section */
+.main-section {
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  height: 50vh; /* Each row takes full screen height */
+}
+
+.column {
+  flex: 0 0 30%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 5px; /* Adds gap between columns */
+}
+
+.column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.buttons {
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  gap: 10px; /* Space between buttons */
+}
+
+.column:hover .buttons {
+  display: flex; /* Show buttons on hover */
+}
+
+/* Button Styling */
+button {
+  padding: 10px 30px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+button:first-child {
+  background-color: green; /* "See More" button */
+}
+
+button:first-child:hover {
+  background-color: darkgreen;
+}
+
+button:last-child {
+  background-color: red; /* "See Demo" button */
+}
+
+button:last-child:hover {
+  background-color: darkred;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
